@@ -1,3 +1,14 @@
+let atHomeButton = document.getElementById('at-home')
+let atBarButton = document.getElementById('at-bar')
+
+atHomeButton.addEventListener('click', function(){
+    window.location.href = 'atHome.HTML'
+})
+
+atBarButton.addEventListener('click', function(){
+    window.location.href = 'atBar.html'
+})
+
 var name = 'bloody mary';
 var apiKey = 'sadkvCxD+O9QsMM0qn+klw==UuKcm3V674QaCQWo'; 
 

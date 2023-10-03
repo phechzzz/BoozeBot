@@ -9,6 +9,50 @@ var brandyButton = document.getElementById('button6')
 var vermouthButton = document.getElementById('button7')
 var cognacButton = document.getElementById('button8')
 
+function renderResults(cocktails){
+  let displayedDrinkContainer = document.getElementById('display-drink')
+  for (let i = 0; i < cocktails.length; i++){
+    let nameContent = cocktails[i].strDrink
+    let ingredient1Content = cocktails[i].strIngredient1
+    let ingredient2Content = cocktails[i].strIngredient2
+    let ingredient3Content = cocktails[i].strIngredient3
+    let ingredient4Content = cocktails[i].strIngredient4
+    let ingredient5Content = cocktails[i].strIngredient5
+    let ingredient6Content = cocktails[i].strIngredient6
+    let ingredient7Content = cocktails[i].strIngredient7
+
+    let nameEl = document.createElement('h2')
+    let ingredient1El = document.createElement('li')
+    let ingredient2El = document.createElement('li')
+    let ingredient3El = document.createElement('li')
+    let ingredient4El = document.createElement('li')
+    let ingredient5El = document.createElement('li')
+    let ingredient6El = document.createElement('li')
+    let ingredient7El = document.createElement('li')
+
+    nameEl.textContent = nameContent
+    ingredient1El.textContent = ingredient1Content
+    ingredient2El.textContent = ingredient2Content
+    ingredient3El.textContent = ingredient3Content
+    ingredient4El.textContent = ingredient4Content
+    ingredient5El.textContent = ingredient5Content
+    ingredient6El.textContent = ingredient6Content
+    ingredient7El.textContent = ingredient7Content
+
+    displayedDrinkContainer.appendChild(nameEl)
+    displayedDrinkContainer.appendChild(ingredient1El)
+    displayedDrinkContainer.appendChild(ingredient2El)
+    displayedDrinkContainer.appendChild(ingredient3El)
+    displayedDrinkContainer.appendChild(ingredient4El)
+    displayedDrinkContainer.appendChild(ingredient5El)
+    displayedDrinkContainer.appendChild(ingredient6El)
+    displayedDrinkContainer.appendChild(ingredient7El)
+    
+  }
+
+
+}
+
 
 function fetchRandomCocktailByAlcohol(alcoholChoice) {
     const apiUrl = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${alcoholChoice}`;
@@ -38,6 +82,7 @@ function fetchRandomCocktailByAlcohol(alcoholChoice) {
         } else {
           console.log(`No cocktails found containing ${alcoholChoice}`);
         }
+        
       })
       .then(response => {
         if (!response.ok) {
@@ -49,6 +94,7 @@ function fetchRandomCocktailByAlcohol(alcoholChoice) {
         // Extract the cocktail details, including ingredients
         const cocktail = cocktailData.drinks[0];
         console.log('Random Cocktail:', cocktail);
+        
   
         // Extract and display ingredients
         console.log('Ingredients:');
@@ -59,12 +105,13 @@ function fetchRandomCocktailByAlcohol(alcoholChoice) {
             console.log(`${measure} ${ingredient}`);
           }
         }
+       renderResults(cocktailData.drinks)
       })
       .catch(error => {
         console.error('Error:', error);
       });
-      var results = response.data
-      //renderResults(results)
+      //var results = response.data
+      
 
   }
   
@@ -93,8 +140,3 @@ function fetchRandomCocktailByAlcohol(alcoholChoice) {
     fetchRandomCocktailByAlcohol('cognac')
   })
  
-function renderResults(results){
-    let displayedDrink = document.getElementById(display-drink)
-
-
-}

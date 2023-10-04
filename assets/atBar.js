@@ -11,6 +11,10 @@ var cognacButton = document.getElementById('button8')
 
 function renderResults(cocktails){
   let displayedDrinkContainer = document.getElementById('display-drink')
+  
+  while (displayedDrinkContainer.firstChild) {
+    displayedDrinkContainer.removeChild(displayedDrinkContainer.firstChild);
+  }
   for (let i = 0; i < cocktails.length; i++){
     let nameContent = cocktails[i].strDrink
     let ingredient1Content = cocktails[i].strIngredient1

@@ -16,7 +16,14 @@ var campariButton = document.getElementById("campari");
 var absintheButton = document.getElementById("absinthe");
 var vermouthButton = document.getElementById("vermouth");
 var searchButton = document.getElementById("search");
-var clearButton = document.getElementById("clear")
+var lemonButton = document.getElementById('lemon')
+var limeButton = document.getElementById('lime')
+var tomatoButton = document.getElementById('tomato')
+var sugarButton = document.getElementById('sugar')
+var saltButton = document.getElementById('salt')
+var chocolateButton = document.getElementById('chocolate')
+var coffeeButton = document.getElementById('coffee')
+
 // Add click event listeners to each ingredient button to trigger the 'getIngredients' function.
 vodkaButton.addEventListener("click", getIngredients);
 rumButton.addEventListener("click", getIngredients);
@@ -28,6 +35,15 @@ tripplesecButton.addEventListener("click", getIngredients);
 campariButton.addEventListener("click", getIngredients);
 absintheButton.addEventListener("click", getIngredients);
 vermouthButton.addEventListener("click", getIngredients);
+lemonButton.addEventListener('click', getIngredients);
+limeButton.addEventListener('click', getIngredients);
+tomatoButton.addEventListener('click', getIngredients);
+sugarButton.addEventListener('click', getIngredients);
+saltButton.addEventListener('click', getIngredients);
+chocolateButton.addEventListener('click', getIngredients);
+coffeeButton.addEventListener('click', getIngredients);
+
+
 
 // Function to get ingredients when an ingredient button is clicked.
 function getIngredients(event) {
@@ -54,13 +70,13 @@ function creatURL() {
     // Reset the API URL.
     APINinjaurl = "https://api.api-ninjas.com/v1/cocktail?ingredients=";
 
-    // Loop through the selected ingredients and add them to the URL.
+     //Loop through the selected ingredients and add them to the URL.
     for (let i = 0; i < ingredients.length; i++) {
         APINinjaurl += ingredients[i];
 
         // If it's not the last ingredient, add a comma to separate them.
         if (i < ingredients.length - 1) {
-            APINinjaurl += ",";
+           APINinjaurl += ",";
         }
     }
 
@@ -95,10 +111,5 @@ function search() {
     });
 }
 
-function clearIngredients() {
-    ingredients = [];
-    APINinjaurl = "";
-}
 // Add a click event listener to the 'searchButton' to trigger the 'search' function.
 searchButton.addEventListener("click", search);
-clearButton.addEventListener("click", clearIngredients);

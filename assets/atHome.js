@@ -16,7 +16,7 @@ var campariButton = document.getElementById("campari");
 var absintheButton = document.getElementById("absinthe");
 var vermouthButton = document.getElementById("vermouth");
 var searchButton = document.getElementById("search");
-
+var clearButton = document.getElementById("clear")
 // Add click event listeners to each ingredient button to trigger the 'getIngredients' function.
 vodkaButton.addEventListener("click", getIngredients);
 rumButton.addEventListener("click", getIngredients);
@@ -95,5 +95,10 @@ function search() {
     });
 }
 
+function clearIngredients() {
+    ingredients = [];
+    APINinjaurl = "";
+}
 // Add a click event listener to the 'searchButton' to trigger the 'search' function.
 searchButton.addEventListener("click", search);
+clearButton.addEventListener("click", clearIngredients);

@@ -43,6 +43,36 @@ saltButton.addEventListener('click', getIngredients);
 chocolateButton.addEventListener('click', getIngredients);
 coffeeButton.addEventListener('click', getIngredients);
 
+function renderResults(data){
+    let drinkListContainer = document.getElementById('card')
+
+    for (let i = 0; i < data.length; i++){
+        let nameContent = data[i].name
+        let ingredientContent = data[i].ingredients
+        let instructionsContent = data[i].instructions
+
+        let nameEl = document.createElement('h2')
+        let ingredientsEl = document.createElement('p')
+        let instructionsEl = document.createElement('p')
+
+        nameEl.textContent = nameContent
+        ingredientsEl.textContent = ingredientContent
+        instructionsEl.textContent = instructionsContent
+
+        drinkListContainer.appendChild(nameEl)
+        drinkListContainer.appendChild(ingredientsEl)
+        drinkListContainer.appendChild(instructionsEl)
+    }
+}
+
+function displayEmptyArrayMessage(){
+    let drinkListContainer = document.getElementById('card')
+    let message = document.createElement('h2')
+    message.textContent = 'Ew! Try a different combo.'
+
+    drinkListContainer.appendChild(message)
+}
+
 
 
 // Function to get ingredients when an ingredient button is clicked.
@@ -102,7 +132,13 @@ function search() {
     .then(function(result) {
         // Log the API response.
         console.log(result);
-
+        
+        if (Array.isArray(result) && result.length === 0) {
+            // Display a message for an empty array
+            displayEmptyArrayMessage();
+        } else {
+            renderResults(result)
+        }
         // You can render the API response on the page here.
     })
     .catch(function(error) {

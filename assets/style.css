@@ -1,0 +1,98 @@
+h1 {color: rgb(144, 0, 248); text-align: center; font-family: cursive; font-weight: 800;}
+nav {background-color: black;}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* take up the full viewport height */
+    margin: 0; /* remove default margin */
+}
+
+#alcohol {
+    display: flex;
+    flex-wrap: wrap;  /* Allow the list items to wrap */
+    gap: 1rem;
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0; /* Remove default padding */
+    max-width: 40%; /* You can adjust this as needed */
+    margin: auto; /* Center the list horizontally */
+}
+
+#alcohol li {
+    flex-basis: calc(50% - 1rem); /* Take up half the space of the container, accounting for the gap */
+}
+button {
+    /* Background Gradient & Text Color */
+    background-image: linear-gradient(45deg, #E5E7EB, #D1D5DB);
+    color: #1F2937;
+
+    /* Padding & Font */
+    padding: 0.75rem 2rem;
+    font-family: 'Helvetica Neue';
+    font-weight: 600;
+    text-align: center;
+
+    /* Rounded Corners */
+    border-radius: 99px;
+
+    /* Hover Styles */
+    transition: background-color 0.3s, color 0.3s;
+    flex-basis: 50%; /* to ensure they take up equal width in two rows */
+
+    /* Set fixed width and height */
+    width: 150px;
+    height: 50px;
+    box-sizing: border-box; /* Include padding and borders in the dimensions */
+}
+
+button:hover {
+    background-image: linear-gradient(45deg, #ff0707, #0062ff);
+    color: white;
+}
+
+button:active {
+    background-image: linear-gradient(45deg, #C7CED9, #EFEFEF);
+}
+
+@media (max-width: 600px) {
+    button {
+        flex-basis: 100%; /* let buttons stack on top of each other on smaller screens */
+    }
+}
+.big-button {
+    /* Bigger font and button size */
+    font-size: 1.5rem; /* Adjust as needed */
+    padding: 1rem 2.5rem; /* Increase padding for a bigger button */
+
+    /* Centering */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    /* Matching the rest of the button's styling */
+    background-image: linear-gradient(45deg, #E5E7EB, #D1D5DB);
+    color: #1F2937;
+    border-radius: 99px;
+    transition: background-color 0.3s, color 0.3s;
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: 600;
+}
+
+.big-button:hover {
+    background-image: linear-gradient(45deg, #ff0707, #0062ff);
+    color: white;
+}
+
+.big-button:active {
+    background-image: linear-gradient(45deg, #C7CED9, #EFEFEF);
+}
+
+
+
+
+
+
+
+

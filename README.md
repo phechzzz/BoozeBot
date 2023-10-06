@@ -36,5 +36,5 @@ BoozeBot is a web application that allows users to discover and explore various 
 This project is licensed under the MIT License
 
 ## Links
-Deployed Site - https://phechzzz.github.io/BoozeBot/
-Repository - https://github.com/phechzzz/BoozeBot
+- Deployed Site - https://phechzzz.github.io/BoozeBot/
+- Repository - https://github.com/phechzzz/BoozeBot

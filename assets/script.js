@@ -2,7 +2,7 @@ let atHomeButton = document.getElementById('AT-HOME')
 let atBarButton = document.getElementById('AT-BAR')
 
 atHomeButton.addEventListener('click', function(){
-    window.location.href = 'atHome.HTML'
+    window.location.href = 'atHome.html'
 })
 
 atBarButton.addEventListener('click', function(){

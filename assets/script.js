@@ -1,5 +1,5 @@
-let atHomeButton = document.getElementById('at-home')
-let atBarButton = document.getElementById('at-bar')
+let atHomeButton = document.getElementById('AT-HOME')
+let atBarButton = document.getElementById('AT-BAR')
 
 atHomeButton.addEventListener('click', function(){
     window.location.href = 'atHome.HTML'

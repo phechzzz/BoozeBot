@@ -146,6 +146,6 @@ function search() {
         console.error('Error: ', error);
     });
 }
-
+var searchButton = document.getElementById('search')
 // Add a click event listener to the 'searchButton' to trigger the 'search' function.
 searchButton.addEventListener("click", search);

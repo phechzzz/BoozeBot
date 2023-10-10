@@ -57,15 +57,7 @@ function renderResults(data){
         let nameEl = document.createElement('h2')
         let ingredientsEl = document.createElement('p')
         let instructionsEl = document.createElement('p')
-        let favoriteEl = document.createElement('button')
-        let svg = document.createElement('svg')
-        favoriteEl.classList.add('favorite-button')
-        svg.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
-        svg.setAttribute('class', "w-5 h-5")
-        svg.setAttribute('fill', 'none')
-        svg.setAttribute('viewBox', '0 0 24 24')
-        svg.setAttribute('stroke', 'currentColor')
-
+       
         nameEl.textContent = nameContent
         ingredientsEl.textContent = ingredientContent
         instructionsEl.textContent = instructionsContent
@@ -73,8 +65,7 @@ function renderResults(data){
         drinkListContainer.appendChild(nameEl)
         drinkListContainer.appendChild(ingredientsEl)
         drinkListContainer.appendChild(instructionsEl)
-        drinkListContainer.appendChild(favoriteEl)
-        favoriteEl.appendChild(svg)
+        
     }
 
 }

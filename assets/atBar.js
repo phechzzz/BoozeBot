@@ -37,6 +37,7 @@ let favoriteDrinkObjects = []
     
         const nameEl = document.createElement('h2');
         nameEl.textContent = nameContent;
+        nameEl.classList.add('text-5xl')
     
         cocktailContainer.appendChild(nameEl);
     
@@ -49,7 +50,7 @@ let favoriteDrinkObjects = []
           ingredientItem.textContent = `${ingredientObj.measure} ${ingredientObj.ingredient}`;
           ingredientsList.appendChild(ingredientItem);
         });
-    
+        ingredientsList.classList.add('text-2xl')
         cocktailContainer.appendChild(ingredientsList);
     
         const favoriteButton = document.createElement('button');

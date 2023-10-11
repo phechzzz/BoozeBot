@@ -57,6 +57,7 @@ function renderResults(data){
         let nameEl = document.createElement('h2')
         let ingredientsEl = document.createElement('p')
         let instructionsEl = document.createElement('p')
+
         let favoriteEl = document.createElement('button')
         let svg = document.createElement('svg')
         favoriteEl.classList.add('favorite-button', 'big-button-style')
@@ -67,6 +68,7 @@ function renderResults(data){
         svg.setAttribute('stroke', 'currentColor')
         favoriteEl.textContent = "ADD TO FAVORITES"
 
+
         nameEl.textContent = nameContent
         ingredientsEl.textContent = ingredientContent
         instructionsEl.textContent = instructionsContent
@@ -74,8 +76,7 @@ function renderResults(data){
         drinkListContainer.appendChild(nameEl)
         drinkListContainer.appendChild(ingredientsEl)
         drinkListContainer.appendChild(instructionsEl)
-        drinkListContainer.appendChild(favoriteEl)
-        favoriteEl.appendChild(svg)
+        
     }
 
 }

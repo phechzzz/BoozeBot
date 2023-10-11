@@ -192,10 +192,7 @@ button:active {
 }
 
 .favorite-button{
-  background-color: gold;
-  height: 5%;
-  border-radius: 50%;
-  width: 5%;
+  width: 20%;
 }
 
 li{

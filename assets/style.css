@@ -1,16 +1,21 @@
 body {
     padding-top: 80px; /* Added more padding to account for fixed nav */
     font-family: 'Helvetica Neue';
-    background-color: #f2f2f2;
+    background-image: url('assets/at bar .png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
-
+html, body {
+    height: 100%;
+}
 nav {
     background-color: rgba(0, 0, 0, 0.344);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 120px;
+    height: 75px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,12 +31,16 @@ h3 {
     color: #7700ff;
     font-family: 'Helvetica Neue', sans-serif; 
 }
-
+h2 {
+    text-align: center; 
+    color: #7700ff;
+    font-family: 'Helvetica Neue', sans-serif; 
+}
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 20rem;
+    padding-top: 2rem;
 }
 
 .container2 {
@@ -74,6 +83,27 @@ h3 {
     width: 80%;
     margin: 0 auto;
 }
+#card {
+    background-color: rgb(255, 255, 255); /* A light white transparent background for the container */
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+#card h2 {
+    font-size: 1.5rem;
+    color: #9900ff;
+    margin-bottom: 0.5rem;
+}
+
+#card p {
+    font-size: 1rem;
+    color: #90f;
+    margin-bottom: 1rem;
+}
+
+
+
+
 button {
     background-image: linear-gradient(45deg, #E5E7EB, #D1D5DB);
     color: #1F2937;
@@ -130,7 +160,30 @@ button:active {
 .big-button > button:active {
     background-image: linear-gradient(45deg, #C7CED9, #EFEFEF);
 }
+.big-button-style {
+    font-size: 1.5rem;
+    padding: 1rem 2.5rem;
+    background-image: linear-gradient(45deg, #E5E7EB, #D1D5DB);
+    color: #1F2937;
+    border-radius: 99px;
+    transition: background-color 0.3s, color 0.3s;
+    text-align: center;
+    font-weight: 600;
+    width: 80%;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.big-button-style:hover {
+    background-image: linear-gradient(45deg, #000000, #7700ff);
+    color: white;
+}
+
+.big-button > button {
+    width: 100%;
+}
 /* Media Queries for responsive text and button resizing */
 
 @media (min-width: 1201px) {
@@ -191,7 +244,7 @@ button:active {
     }
 }
 
-.favorite-button{
+.favorites-button{
   background-color: gold;
   height: 5%;
   border-radius: 50%;
@@ -242,7 +295,7 @@ nav{
     background-color: #fefefe;
     margin: 15% auto;
     padding: 20px;
-    border: 1px solid #888;
+    border: 1px solid #8000ff;
     width: 50%;
 }
 

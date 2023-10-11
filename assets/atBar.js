@@ -53,7 +53,7 @@ let favoriteDrinkObjects = []
         cocktailContainer.appendChild(ingredientsList);
     
         const favoriteButton = document.createElement('button');
-        favoriteButton.classList.add('favorite-button');
+        favoriteButton.classList.add('favorite-button', 'big-button-style');
         favoriteButton.textContent = 'Add to Favorites';
     
         favoriteButton.addEventListener('click', function () {

@@ -59,12 +59,13 @@ function renderResults(data){
         let instructionsEl = document.createElement('p')
         let favoriteEl = document.createElement('button')
         let svg = document.createElement('svg')
-        favoriteEl.classList.add('favorite-button')
+        favoriteEl.classList.add('favorite-button', 'big-button-style')
         svg.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
         svg.setAttribute('class', "w-5 h-5")
         svg.setAttribute('fill', 'none')
         svg.setAttribute('viewBox', '0 0 24 24')
         svg.setAttribute('stroke', 'currentColor')
+        favoriteEl.textContent = "ADD TO FAVORITES"
 
         nameEl.textContent = nameContent
         ingredientsEl.textContent = ingredientContent

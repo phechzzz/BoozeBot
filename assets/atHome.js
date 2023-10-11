@@ -57,7 +57,11 @@ function renderResults(data){
         let nameEl = document.createElement('h2')
         let ingredientsEl = document.createElement('p')
         let instructionsEl = document.createElement('p')
-       
+        nameEl.classList.add('text-5xl')
+        ingredientsEl.classList.add('ingredientsEl')
+        ingredientsEl.classList.add('text-2xl')
+        instructionsEl.classList.add('instructionsEl')
+        instructionsEl.classList.add('text-lg')
         nameEl.textContent = nameContent
         ingredientsEl.textContent = ingredientContent
         instructionsEl.textContent = instructionsContent

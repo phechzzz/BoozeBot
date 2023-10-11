@@ -23,6 +23,7 @@ var sugarButton = document.getElementById('sugar')
 var saltButton = document.getElementById('salt')
 var chocolateButton = document.getElementById('chocolate')
 var coffeeButton = document.getElementById('coffee')
+var clearButton = document.getElementById('clear')
 var favoriteButton
 // Add click event listeners to each ingredient button to trigger the 'getIngredients' function.
 vodkaButton.addEventListener("click", getIngredients);
@@ -162,6 +163,13 @@ function search() {
         console.error('Error: ', error);
     });
 }
+function clearIngredients() {
+    ingredients = [];
+    APINinjaurl = "";
+}
+
 var searchButton = document.getElementById('search')
 // Add a click event listener to the 'searchButton' to trigger the 'search' function.
 searchButton.addEventListener("click", search);
+// Add a click event listener to the clearbutton to trigger the clear function
+clearButton.addEventListener('click', clearIngredients);

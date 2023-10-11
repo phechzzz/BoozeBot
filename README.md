@@ -25,17 +25,16 @@ BoozeBot is a web application that allows users to discover and explore various 
 - Click the add to favorites button to store a drink to local storage
 - Click on the favorites button to be presented with your locally stored "favorite" drinks in a modal!
 ## Screenshots of Site
-![Screenshot 2023-10-05 201806](https://github.com/phechzzz/BoozeBot/assets/141693593/185a80ad-8d7b-4f8c-b4ae-1dd7620db475)
-![Screenshot 2023-10-05 201904](https://github.com/phechzzz/BoozeBot/assets/141693593/5295c32a-152c-4421-b7f2-1326a8129b2e)
-![image](https://github.com/phechzzz/BoozeBot/assets/141693593/01073f8a-247e-4436-a234-06c60738f1fb)
-![image](https://github.com/phechzzz/BoozeBot/assets/141693593/f56e0c25-20b8-40d8-b4b8-0c3729c3064e)
-![image](https://github.com/phechzzz/BoozeBot/assets/141693593/3d91c2c8-3078-4f11-8981-155b578a093f)
-
-
+![image](https://github.com/phechzzz/BoozeBot/assets/141693593/0473b3ca-80cb-49cf-afa2-76c685a27ae4)
+![image](https://github.com/phechzzz/BoozeBot/assets/141693593/cefc280b-c342-4474-9a22-220b5827b785)
+![image](https://github.com/phechzzz/BoozeBot/assets/141693593/36ca2275-9788-4b5d-a631-96676690f6be)
+![image](https://github.com/phechzzz/BoozeBot/assets/141693593/3f411d01-896c-466d-904b-6578469f9b6a)
+![image](https://github.com/phechzzz/BoozeBot/assets/141693593/9a601667-74e1-4bb9-a996-c99f7e17b0dc)
+![image](https://github.com/phechzzz/BoozeBot/assets/141693593/ee92193c-a5e7-4332-a360-8bfa8d1f1774)
 ## API's Used
 - TheCocktailDB API: Used to fetch cocktail details and recipes.
 - API Ninjas API: Used for ingredient-based cocktail searches.
-
+- Tailwind: Used for CSS
 ## Contributors
 - Landon Peterson https://github.com/LandonP172
 - Peyton Engborg https://github.com/phechzzz

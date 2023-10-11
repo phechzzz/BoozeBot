@@ -1,24 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"><link rel="stylesheet" href="assets/style.css">
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <title>BoozeBot</title>
-</head>
-<body>
-  <body style="background-image: url('assets/homepage.png');">
-  <nav>
-    <img src="assets/boozebot logo.png" alt="Boozebot logo">
-    
-</nav>
 
-   <main>
-    <div class="container2">
-    <button id="AT-HOME" class="rounded-full">AT HOME</button>
-    <button id="AT-BAR" class="rounded-full">AT THE BAR</button>
-  </div>
-   </main>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <title>BoozeBot</title>
+</head>
+
+
+<body class="bg-cover bg-center bg-no-repeat" style="background-image: url('assets/homepage.png');">
+
+ 
+    <!-- Navbar -->
+    <nav class="bg-gray-800">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+            <div class="relative flex h-16 items-center justify-between">
+                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                    <div class="flex flex-shrink-0 items-center">
+                        <!-- Wrapping the image with a link -->
+                        <a href="index.html">
+                            <img class="h-10 w-auto" src="assets/boozebot logo.png" alt="BoozeBot logo">
+                        </a>
+                    </div>
+                    <div class="hidden sm:ml-6 sm:block">
+                        <div class="flex space-x-4">
+                            <a href="index.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-medium">Home</a>
+                            <a href="atBar.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-medium">At Bar</a>
+                            <a href="atHome.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-medium">At Home</a>
+                            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-gold rounded-md px-3 py-2 text-md font-medium" id="favorite-drinks">Favorites</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="text-center mt-12">
+        <h2 class="text-4xl mb-8 text-white">WHERE ARE YOU DRINKING?</h2>
+        <div class="container mx-auto mt-6 mb-12 text-center">
+            <div class="flex justify-center space-x-4">
+                <button class="btn bg-gradient-to-r from-gray-200 via-white to-gray-200 text-gray-900 px-8 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50 text-sm" id="AT-HOME">AT HOME</button>
+                <button class="btn bg-gradient-to-r from-gray-200 via-white to-gray-200 text-gray-900 px-8 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50 text-sm" id="AT-BAR">AT THE BAR</button>                
+            </div>
+        </div>
+        
+    </main>
+
+
     <script src="assets/index.js"></script>
 </body>
+
+</html>

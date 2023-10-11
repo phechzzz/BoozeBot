@@ -1,53 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css">
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
- 
 
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>BoozeBot</title>
 </head>
 
-<body>
-  <body style="background-image: url('assets/at home background.png');">
-<nav class="nav">
-      <img src="assets/boozebot logo.png" alt="Boozebot logo">
-  </nav>  
-    <h3 class="text-6xl choose">Try different ingredient combinations and see what drinks exist!</h3>
-        
-      
- 
-  <div>
-  <ul id="alcohol" class="container">
+
+<body class="bg-cover bg-center bg-no-repeat min-h-screen" style="background-image: url('assets/at home background.png');">
 
 
-        <li><button id="vodka" class="rounded-full">Vodka</button></li>
-        <li><button id="rum" class="rounded-full">Rum</button></li>
-        <li><button id="whiskey" class="rounded-full">Whiskey</button></li>
-        <li><button id="gin" class="rounded-full">Gin</button></li>
-        <li><button id="tequila" class="rounded-full">Tequila</button></li>
-        <li><button id="brandy" class="rounded-full">Brandy/Cognac</button></li>
-        <li><button id="trippleSec" class="rounded-full">Tripple Sec</button></li>
-        <li><button id="campari" class="rounded-full">Campari</button></li>
-        <li><button id="absinthe" class="rounded-full">Absinthe</button></li>
-        <li><button id="vermouth" class="rounded-full">Vermouth</button></li>
-        <li><button id="lemon" class="rounded-full">Lemon Juice</button></li>
-        <li><button id="lime" class="rounded-full">Lime Juice</button></li>
-        <li><button id="tomato" class="rounded-full">Tomato Juice</button></li>
-        <li><button id="sugar" class="rounded-full">Sugar</button></li>
-        <li><button id="salt" class="rounded-full">Salt</button></li>
-        <li><button id="chocolate" class="rounded-full">Chocolate</button></li>
-        <li><button id="coffee" class="rounded-full">Coffee</button></li>
 
+    <!-- Navbar -->
+    <nav class="bg-gray-800">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+            <div class="relative flex h-16 items-center justify-between">
+                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                    <div class="flex flex-shrink-0 items-center">
+                        <a href="index.html">
+                            <img class="h-10 w-auto" src="assets/boozebot logo.png" alt="BoozeBot logo">
+                        </a>
+                    </div>
+                    <div class="hidden sm:ml-6 sm:block">
+                        <div class="flex space-x-4">
+                            <a href="index.html" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-md font-medium">Home</a>
+                            <a href="atBar.html" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-md font-medium">At Bar</a>
+                            <a href="atHome.html" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-md font-medium">At Home</a>
+                            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-gold px-3 py-2 rounded-md text-md font-medium" id="favorite-drinks">Favorites</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <h3 class="text-center text-2xl mt-2 mb-4 text-white">MIX & MATCH TO FIND DRINKS!</h3>
+
+
+    <div class="container mx-auto mt-1.5">
+      <ul id="alcohol" class="grid grid-cols-3 gap-1 max-w-xl mx-auto mt-6">
+        <li><button class="btn bg-gradient-to-r from-gray-200 via-white to-gray-200 text-gray-900 px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50" id="vodka">Vodka</button></li>
+        <li><button class="btn bg-gradient-to-r from-gray-200 via-white to-gray-200 text-gray-900 px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50" id="rum">Rum</button></li>
+        <li><button class="btn bg-gradient-to-r from-gray-200 via-white to-gray-200 text-gray-900 px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50" id="whiskey">Whiskey</button></li>
+        <li><button class="btn bg-gradient-to-r from-gray-200 via-white to-gray-200 text-gray-900 px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50" id="gin">Gin</button></li>
+        <li><button class="btn bg-gradient-to-r from-gray-200 via-white to-gray-200 text-gray-900 px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50" id="tequila">Tequila</button></li>
+        <li><button class="btn bg-gradient-to-r from-gray-200 via-white to-gray-200 text-gray-900 px-2 py-2 text-sm sm:text-md rounded-full rounded-full focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50" id="brandy">Brandy/Cognac</button></li>
+        <li><button class="btn bg-gradient-to-r from-gray-200 via-white to-gray-200 text-gray-900 px-4 py-2 text-sm sm:text-md rounded-full rounded-full focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50" id="trippleSec">Tripple Sec</button></li>
+        <li><button class="btn bg-gradient-to-r from-gray-200 via-white to-gray-200 text-gray-900 px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50" id="campari">Campari</button></li>
+        <li><button class="btn bg-gradient-to-r from-gray-200 via-white to-gray-200 text-gray-900 px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50" id="absinthe">Absinthe</button></li>
+        <li><button class="btn bg-gradient-to-r from-gray-200 via-white to-gray-200 text-gray-900 px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50" id="vermouth">Vermouth</button></li>
+        <li><button class="btn bg-gradient-to-r from-gray-200 via-white to-gray-200 text-gray-900 px-2 py-2 text-sm sm:text-md rounded-full rounded-full focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50" id="lemon">Lemon Juice</button></li>
+        <li><button class="btn bg-gradient-to-r from-gray-200 via-white to-gray-200 text-gray-900 px-4 py-2 text-sm sm:text-md rounded-full rounded-full focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50" id="lime">Lime Juice</button></li>
+        <li><button class="btn bg-gradient-to-r from-gray-200 via-white to-gray-200 text-gray-900 px-2 py-2 text-sm sm:text-md rounded-full rounded-full focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50" id="tomato">Tomato Juice</button></li>
+        <li><button class="btn bg-gradient-to-r from-gray-200 via-white to-gray-200 text-gray-900 px-2 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50" id="sugar">Sugar</button></li>
+        <li><button class="btn bg-gradient-to-r from-gray-200 via-white to-gray-200 text-gray-900 px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50" id="salt">Salt</button></li>
+        <li><button class="btn bg-gradient-to-r from-gray-200 via-white to-gray-200 text-gray-900 px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50" id="chocolate">Chocolate</button></li>
+        <li><button class="btn bg-gradient-to-r from-gray-200 via-white to-gray-200 text-gray-900 px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50" id="coffee">Coffee</button></li>
     </ul>
-  </div>
-    <div class="big-button">
-    <button .big-button="search" id="search">Find a drink!</button>
-    <button .big-button="clear">Clear ingredients</button>
-  </div>
-    <aside id="card">
-    </aside>
+    
+    </div>
+    
+    <div class="big-button mx-auto mt-6">
+        <button class="btn bg-gradient-to-r from-gray-200 via-white to-gray-200 text-gray-900 px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50" id="search">Find a drink!</button>
+        <button class="btn bg-gradient-to-r from-gray-200 via-white to-gray-200 text-gray-900 px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50">Clear ingredients</button>
+    </div>
+    
+    <aside id="card"></aside>
+    
     <script src="assets/atHome.js"></script>
 </body>
+
+</html>
+

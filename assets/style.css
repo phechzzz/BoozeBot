@@ -260,3 +260,11 @@ color: #7700ff;
 margin-top: 40px;
 margin-bottom: 20px;
 }
+
+.ingredientsEl{
+    color: white
+}
+
+.instructionsEl{
+    color: white;
+}
